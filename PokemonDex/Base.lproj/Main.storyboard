@@ -29,8 +29,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cgf-H7-rN1" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xGv-LR-g8L">
-                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xGv-LR-g8L">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

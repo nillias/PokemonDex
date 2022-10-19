@@ -12,17 +12,22 @@ import Foundation
 import SDWebImage
 
 
-var searchController: UISearchController!
 
-
-var dataPokemon = [String]()
-var filteredPokemon = [String]()
-var sholdShowSearchResults = false
-
-
-
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UISearchResultsUpdating {
     
+    //searchbar
+    let searchController = UISearchController()
+    
+    //busca da search bar
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        
+        print(text)
+    }
+    
+    var cardSaved: [URL] = [ ]
     
     //configuraçoes da table view
     lazy var tableView = {
@@ -46,7 +51,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Pokemon TCG"
-
+        
+        //searchbar
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        
         //chamada da API
         API.makeRequest{
             (cards) in
@@ -56,6 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         view.addSubview(tableView)
         
+        //Celulas a da tableview
         tableView.register(
             UINib(nibName: "CardUICell", bundle: nil),
             forCellReuseIdentifier: "cell"
@@ -63,19 +73,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
-        // Tirar o feito de cell tepped (Verificar, pois isso torna a tableView não selecionável)
-        tableView.allowsSelection = false
-        //chamando as constranins
-        setConstrains()
-       
+        tableView.allowsSelection = false // Tirar o efeito de cell tepped (Verificar, pois isso torna a tableView não selecionável)
+        
+        setConstrains() //chamando as constraints
         
     }
     
-    //searchbar
+    
+    //constraints da tableview
+    func setConstrains(){
+        
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+    }
     
     
-    
-    //table view
+}
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data?.data.count ?? 0
     }
@@ -84,6 +106,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let card = data?.data[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CardUICell
         cell.configure(with: card ?? Card(id: "", name: "", images: Images(large: "")) )
+        cell.delegate = self
         
         return cell
     }
@@ -94,16 +117,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("cell tapped \(indexPath.row)")
     }
     
-    //
-    func setConstrains(){
-        NSLayoutConstraint.activate([
-            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
-        ])
-    }
-    
     
 }
 
+
+extension ViewController: CellDelegate {
+    func saveImage(with url: URL) {
+        cardSaved.append(url)
+        print(cardSaved)
+    }
+}

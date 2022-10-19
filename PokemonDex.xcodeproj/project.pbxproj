@@ -55,7 +55,7 @@
 		A103866328F5D38800DC4A76 /* PokemonDexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonDexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A103866728F5D38800DC4A76 /* PokemonDexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDexUITests.swift; sourceTree = "<group>"; };
 		A103866928F5D38800DC4A76 /* PokemonDexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDexUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A103867C28FDCA0900DC4A76 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../../../../../../../API.swift; sourceTree = "<group>"; };
+		A103867C28FDCA0900DC4A76 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A103868328FDDC4600DC4A76 /* CardUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardUICell.swift; path = ../../../../../../../CardUICell.swift; sourceTree = "<group>"; };
 		A103868428FDDC4600DC4A76 /* CardUICell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CardUICell.xib; path = ../../../../../../../CardUICell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,9 +109,10 @@
 		A103864228F5D38600DC4A76 /* PokemonDex */ = {
 			isa = PBXGroup;
 			children = (
-				A103867928F5D3B500DC4A76 /* Controller */,
 				A103867828F5D3AB00DC4A76 /* View */,
+				A103867928F5D3B500DC4A76 /* Controller */,
 				A103867628F5D39800DC4A76 /* Model */,
+				A151323028FF925B00D41F60 /* Service */,
 				A103864328F5D38600DC4A76 /* AppDelegate.swift */,
 				A103864528F5D38600DC4A76 /* SceneDelegate.swift */,
 				A103864928F5D38600DC4A76 /* Main.storyboard */,
@@ -143,7 +144,6 @@
 		A103867628F5D39800DC4A76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A103867C28FDCA0900DC4A76 /* API.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +165,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A151323028FF925B00D41F60 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A103867C28FDCA0900DC4A76 /* API.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,6 +183,7 @@
 				A103863C28F5D38600DC4A76 /* Sources */,
 				A103863D28F5D38600DC4A76 /* Frameworks */,
 				A103863E28F5D38600DC4A76 /* Resources */,
+				A151323129004A9600D41F60 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -297,6 +306,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A151323129004A9600D41F60 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A103863C28F5D38600DC4A76 /* Sources */ = {
