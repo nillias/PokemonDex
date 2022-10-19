@@ -12,10 +12,19 @@ import Foundation
 import SDWebImage
 
 
+var searchController: UISearchController!
+
+
+var dataPokemon = [String]()
+var filteredPokemon = [String]()
+var sholdShowSearchResults = false
+
+
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-//configuraçoes da table view
+    
+    //configuraçoes da table view
     lazy var tableView = {
         let table = UITableView()
         table.separatorStyle = .none
@@ -23,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return table
     }()
     
-// atualizção da table view
+    // atualizção da table view
     var data: Data? {
         didSet {
             DispatchQueue.main.async {
@@ -36,7 +45,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Pokemon TCG"
+
         //chamada da API
         API.makeRequest{
             (cards) in
@@ -57,10 +67,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.allowsSelection = false
         //chamando as constranins
         setConstrains()
+       
         
     }
     
-//table view
+    //searchbar
+    
+    
+    
+    //table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data?.data.count ?? 0
     }
@@ -79,7 +94,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("cell tapped \(indexPath.row)")
     }
     
-//
+    //
     func setConstrains(){
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
