@@ -21,6 +21,7 @@
 		A103868228FDD8AF00DC4A76 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A103868128FDD8AF00DC4A76 /* SDWebImage */; };
 		A103868528FDDC4600DC4A76 /* CardUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103868328FDDC4600DC4A76 /* CardUICell.swift */; };
 		A103868628FDDC4600DC4A76 /* CardUICell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A103868428FDDC4600DC4A76 /* CardUICell.xib */; };
+		A151323D29016B6300D41F60 /* CardSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151323C29016B6300D41F60 /* CardSaveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		A103867C28FDCA0900DC4A76 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A103868328FDDC4600DC4A76 /* CardUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardUICell.swift; path = ../../../../../../../CardUICell.swift; sourceTree = "<group>"; };
 		A103868428FDDC4600DC4A76 /* CardUICell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CardUICell.xib; path = ../../../../../../../CardUICell.xib; sourceTree = "<group>"; };
+		A151323C29016B6300D41F60 /* CardSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSaveViewController.swift; path = ../../../../../../../CardSaveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				A103864728F5D38600DC4A76 /* ViewController.swift */,
 				A103868328FDDC4600DC4A76 /* CardUICell.swift */,
 				A103868428FDDC4600DC4A76 /* CardUICell.xib */,
+				A151323C29016B6300D41F60 /* CardSaveViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				A103868528FDDC4600DC4A76 /* CardUICell.swift in Sources */,
 				A103864828F5D38600DC4A76 /* ViewController.swift in Sources */,
 				A103864E28F5D38600DC4A76 /* PokemonDex.xcdatamodeld in Sources */,
+				A151323D29016B6300D41F60 /* CardSaveViewController.swift in Sources */,
 				A103864428F5D38600DC4A76 /* AppDelegate.swift in Sources */,
 				A103864628F5D38600DC4A76 /* SceneDelegate.swift in Sources */,
 				A103867D28FDCA0900DC4A76 /* API.swift in Sources */,

@@ -18,11 +18,33 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Wz1-k7-AHB"/>
+                    <navigationItem key="navigationItem" id="Wz1-k7-AHB">
+                        <barButtonItem key="rightBarButtonItem" title="Meus Cards" id="FfG-0m-Lah">
+                            <connections>
+                                <segue destination="2FK-Ui-91Z" kind="show" id="owR-Dc-ZD2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1069.2307692307693" y="-23.459715639810426"/>
+        </scene>
+        <!--Meus Cards-->
+        <scene sceneID="rrt-xU-z6h">
+            <objects>
+                <viewController title="Meus Cards" id="2FK-Ui-91Z" customClass="CardSaveViewController" customModule="PokemonDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J9v-IA-YWx">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HTe-4z-Mxj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Meus Cards" id="jLW-ck-c3z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XqO-aR-cpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921.5384615384614" y="-23.459715639810426"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IFx-7T-n7K">
@@ -30,8 +52,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cgf-H7-rN1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xGv-LR-g8L">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xGv-LR-g8L">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
