@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,10 @@
 		A103868228FDD8AF00DC4A76 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A103868128FDD8AF00DC4A76 /* SDWebImage */; };
 		A103868528FDDC4600DC4A76 /* CardUICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A103868328FDDC4600DC4A76 /* CardUICell.swift */; };
 		A103868628FDDC4600DC4A76 /* CardUICell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A103868428FDDC4600DC4A76 /* CardUICell.xib */; };
+		A137A0922906C9DC00B22FED /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137A0912906C9DC00B22FED /* Persistencia.swift */; };
 		A151323D29016B6300D41F60 /* CardSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151323C29016B6300D41F60 /* CardSaveViewController.swift */; };
+		A15132402901D23700D41F60 /* CardSave+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151323E2901D23700D41F60 /* CardSave+CoreDataClass.swift */; };
+		A15132412901D23700D41F60 /* CardSave+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151323F2901D23700D41F60 /* CardSave+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +62,12 @@
 		A103867C28FDCA0900DC4A76 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A103868328FDDC4600DC4A76 /* CardUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardUICell.swift; path = ../../../../../../../CardUICell.swift; sourceTree = "<group>"; };
 		A103868428FDDC4600DC4A76 /* CardUICell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CardUICell.xib; path = ../../../../../../../CardUICell.xib; sourceTree = "<group>"; };
+		A137A0912906C9DC00B22FED /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistencia.swift; path = ../../../../../../../Persistencia.swift; sourceTree = "<group>"; };
 		A151323C29016B6300D41F60 /* CardSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSaveViewController.swift; path = ../../../../../../../CardSaveViewController.swift; sourceTree = "<group>"; };
+		A151323E2901D23700D41F60 /* CardSave+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardSave+CoreDataClass.swift"; path = "../../../../../CardSave+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A151323F2901D23700D41F60 /* CardSave+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardSave+CoreDataProperties.swift"; path = "../../../../../CardSave+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A15132422901D23D00D41F60 /* CardSave+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardSave+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A15132432901D23D00D41F60 /* CardSave+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardSave+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,8 @@
 		A103863728F5D38600DC4A76 = {
 			isa = PBXGroup;
 			children = (
+				A151323E2901D23700D41F60 /* CardSave+CoreDataClass.swift */,
+				A151323F2901D23700D41F60 /* CardSave+CoreDataProperties.swift */,
 				A103864228F5D38600DC4A76 /* PokemonDex */,
 				A103865C28F5D38800DC4A76 /* PokemonDexTests */,
 				A103866628F5D38800DC4A76 /* PokemonDexUITests */,
@@ -146,6 +156,9 @@
 		A103867628F5D39800DC4A76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A15132422901D23D00D41F60 /* CardSave+CoreDataClass.swift */,
+				A15132432901D23D00D41F60 /* CardSave+CoreDataProperties.swift */,
+				A137A0912906C9DC00B22FED /* Persistencia.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,7 +273,7 @@
 				};
 			};
 			buildConfigurationList = A103863B28F5D38600DC4A76 /* Build configuration list for PBXProject "PokemonDex" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -339,9 +352,12 @@
 				A103864828F5D38600DC4A76 /* ViewController.swift in Sources */,
 				A103864E28F5D38600DC4A76 /* PokemonDex.xcdatamodeld in Sources */,
 				A151323D29016B6300D41F60 /* CardSaveViewController.swift in Sources */,
+				A15132402901D23700D41F60 /* CardSave+CoreDataClass.swift in Sources */,
 				A103864428F5D38600DC4A76 /* AppDelegate.swift in Sources */,
 				A103864628F5D38600DC4A76 /* SceneDelegate.swift in Sources */,
+				A15132412901D23700D41F60 /* CardSave+CoreDataProperties.swift in Sources */,
 				A103867D28FDCA0900DC4A76 /* API.swift in Sources */,
+				A137A0922906C9DC00B22FED /* Persistencia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,8 +11,6 @@ import Foundation
 
 import SDWebImage
 
-
-
 class ViewController: UIViewController, UISearchResultsUpdating {
     
     //searchbar
@@ -27,8 +25,10 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         print(text)
     }
     
-    var cardSaved: [URL] = [ ]
+   
     
+    var cardSaved: [URL] = [ ]
+   
     //configuraçoes da table view
     lazy var tableView = {
         let table = UITableView()
@@ -47,7 +47,6 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Pokemon TCG"
@@ -65,7 +64,7 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         
         view.addSubview(tableView)
         
-        //Celulas a da tableview
+        //registro da xib na celulas a da tableview
         tableView.register(
             UINib(nibName: "CardUICell", bundle: nil),
             forCellReuseIdentifier: "cell"
@@ -79,10 +78,8 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         
     }
     
-    
     //constraints da tableview
     func setConstrains(){
-        
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
@@ -91,8 +88,7 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         ])
         
     }
-    
-    
+
 }
 
 
@@ -119,7 +115,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
-
 
 extension ViewController: CellDelegate {
     func saveImage(with url: URL) {
