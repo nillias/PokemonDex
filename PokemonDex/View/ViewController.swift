@@ -117,8 +117,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController: CellDelegate {
-    func saveImage(with url: URL) {
-        cardSaved.append(url)
+    func saveImage(with url: String) {
+        CoreDataManager.shared.createSaveCard(id: "id", url: url)
+        let fetch = CoreDataManager.shared.fetchSaveCards()
         print(cardSaved)
     }
 }
