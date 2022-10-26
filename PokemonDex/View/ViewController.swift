@@ -25,7 +25,6 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         print(text)
     }
     
-   
     
     var cardSaved: [URL] = [ ]
    
@@ -59,7 +58,7 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         API.makeRequest{
             (cards) in
             self.data = cards
-            print(cards)
+            //print(cards)
         }
         
         view.addSubview(tableView)
@@ -120,6 +119,6 @@ extension ViewController: CellDelegate {
     func saveImage(with url: String) {
         CoreDataManager.shared.createSaveCard(id: "id", url: url)
         let fetch = CoreDataManager.shared.fetchSaveCards()
-        print(cardSaved)
+        print(fetch ?? "")
     }
 }
