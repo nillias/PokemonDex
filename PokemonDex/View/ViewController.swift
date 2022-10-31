@@ -25,7 +25,6 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         print(text)
     }
     
-    
     var cardSaved: [URL] = [ ]
    
     //configuraçoes da table view
@@ -90,7 +89,6 @@ class ViewController: UIViewController, UISearchResultsUpdating {
 
 }
 
-
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,7 +103,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

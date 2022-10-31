@@ -7,8 +7,6 @@
 
 import UIKit
 
-//API
-
 struct Data: Codable {
     let data: [Card]
 }
@@ -41,12 +39,9 @@ class API {
                 print("error: \(error)")
                 
             }
-          
 
         }
         task.resume()
     }
-
-
 }
-// Fim da API
+
