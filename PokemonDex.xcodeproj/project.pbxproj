@@ -58,10 +58,10 @@
 		A103866728F5D38800DC4A76 /* PokemonDexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDexUITests.swift; sourceTree = "<group>"; };
 		A103866928F5D38800DC4A76 /* PokemonDexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDexUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A103867C28FDCA0900DC4A76 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		A103868328FDDC4600DC4A76 /* CardUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardUICell.swift; path = ../../../../../../../CardUICell.swift; sourceTree = "<group>"; };
-		A103868428FDDC4600DC4A76 /* CardUICell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CardUICell.xib; path = ../../../../../../../CardUICell.xib; sourceTree = "<group>"; };
-		A137A0912906C9DC00B22FED /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistencia.swift; path = ../../../../../../../Persistencia.swift; sourceTree = "<group>"; };
-		A151323C29016B6300D41F60 /* CardSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSaveViewController.swift; path = ../../../../../../../CardSaveViewController.swift; sourceTree = "<group>"; };
+		A103868328FDDC4600DC4A76 /* CardUICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUICell.swift; sourceTree = "<group>"; };
+		A103868428FDDC4600DC4A76 /* CardUICell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardUICell.xib; sourceTree = "<group>"; };
+		A137A0912906C9DC00B22FED /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
+		A151323C29016B6300D41F60 /* CardSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSaveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
