@@ -11,7 +11,15 @@ import Foundation
 
 import SDWebImage
 
+import Lottie
+
 class ViewController: UIViewController, UISearchResultsUpdating {
+    
+    var animationView: LottieAnimationView?
+    
+    var isHidden: Bool = false
+    
+ 
     
     //searchbar
     let searchController = UISearchController()
@@ -26,7 +34,7 @@ class ViewController: UIViewController, UISearchResultsUpdating {
     }
     
     var cardSaved: [URL] = [ ]
-   
+    
     //configuraçoes da table view
     lazy var tableView = {
         let table = UITableView()
@@ -57,7 +65,11 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         API.makeRequest{
             (cards) in
             self.data = cards
+            
+            
+            
             //print(cards)
+            
         }
         
         view.addSubview(tableView)
@@ -74,6 +86,16 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         
         setConstrains() //chamando as constraints
         
+        
+        self.animationView = .init(name: "pokebola")
+        self.animationView?.frame = CGRect(x: view.frame.midX - 50, y: view.frame.midY, width: 100, height: 100)
+        self.view.addSubview(self.animationView!)
+        animationView?.loopMode = .loop
+        animationView?.layer.opacity = 0.9
+        animationView?.play()
+        
+        
+        
     }
     
     //constraints da tableview
@@ -86,11 +108,11 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         ])
         
     }
-
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-  
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data?.data.count ?? 0
     }
@@ -100,6 +122,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CardUICell
         cell.configure(with: card ?? Card(id: "", name: "", images: Images(large: "")) )
         cell.delegate = self
+        
+        self.animationView?.isHidden = true
         
         return cell
     }
