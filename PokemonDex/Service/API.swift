@@ -7,19 +7,6 @@
 
 import UIKit
 
-struct Data: Codable {
-    let data: [Card]
-}
-
-struct Card: Codable {
-    let id, name: String
-    let images: Images
-}
-
-struct Images: Codable {
-    let large: String
-}
-
 class API {
 
     static func makeRequest(completion: @escaping (Data) -> ()) {

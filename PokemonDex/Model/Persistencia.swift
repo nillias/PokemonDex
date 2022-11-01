@@ -33,6 +33,7 @@ struct CoreDataManager {
         CardSaved.id = id
         CardSaved.url = url
         
+        
         do {
             try context.save()
         } catch let error {
@@ -45,9 +46,10 @@ struct CoreDataManager {
         let context = persistentContainers.viewContext
         
         let fetchRequest = NSFetchRequest<CardSalvo>(entityName: "CardSalvo")
-        
+                
         do {
             let cardSaveds = try context.fetch(fetchRequest)
+           
             return cardSaveds
         } catch let error {
             print("Failed to fetch companies: \(error)" )
@@ -70,6 +72,17 @@ struct CoreDataManager {
         }
         return nil
     }
+    
+//    func deleteDuplicados(_ contexto: NSManagedObjectContext) {
+//        let fetchDuplicados = NSFetchRequest<CardSalvo>(entityName: "CardSalvo")
+//        
+//        do {
+//            url = try! (contexto.fetch(fetchDuplicados) )
+//        } catch let error as NSError {
+//            print("Temos esse erro \(error.code)")
+//        }
+//    }
+    
     
 }
 

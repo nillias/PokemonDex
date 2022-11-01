@@ -24,6 +24,7 @@
 		A1298CE829100BFC0063D0A2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A1298CE729100BFC0063D0A2 /* Lottie */; };
 		A137A0922906C9DC00B22FED /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = A137A0912906C9DC00B22FED /* Persistencia.swift */; };
 		A151323D29016B6300D41F60 /* CardSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151323C29016B6300D41F60 /* CardSaveViewController.swift */; };
+		A1517526291153D70060036D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1517525291153D70060036D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		A103868428FDDC4600DC4A76 /* CardUICell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardUICell.xib; sourceTree = "<group>"; };
 		A137A0912906C9DC00B22FED /* Persistencia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
 		A151323C29016B6300D41F60 /* CardSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSaveViewController.swift; sourceTree = "<group>"; };
+		A1517525291153D70060036D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = ../../../../../../../Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				A137A0912906C9DC00B22FED /* Persistencia.swift */,
+				A1517525291153D70060036D /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1517526291153D70060036D /* Model.swift in Sources */,
 				A103868528FDDC4600DC4A76 /* CardUICell.swift in Sources */,
 				A103864828F5D38600DC4A76 /* ViewController.swift in Sources */,
 				A103864E28F5D38600DC4A76 /* PokemonDex.xcdatamodeld in Sources */,

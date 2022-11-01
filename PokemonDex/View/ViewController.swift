@@ -13,25 +13,15 @@ import SDWebImage
 
 import Lottie
 
-class ViewController: UIViewController, UISearchResultsUpdating {
+class ViewController: UIViewController {
     
     var animationView: LottieAnimationView?
     
     var isHidden: Bool = false
     
- 
-    
     //searchbar
     let searchController = UISearchController()
     
-    //busca da search bar
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else {
-            return
-        }
-        
-        print(text)
-    }
     
     var cardSaved: [URL] = [ ]
     
@@ -65,8 +55,6 @@ class ViewController: UIViewController, UISearchResultsUpdating {
         API.makeRequest{
             (cards) in
             self.data = cards
-            
-            
             
             //print(cards)
             
@@ -142,4 +130,16 @@ extension ViewController: CellDelegate {
         let fetch = CoreDataManager.shared.fetchSaveCards()
         print(fetch ?? "")
     }
+}
+
+//busca da search bar
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        
+        print(text)
+    }
+    
 }
